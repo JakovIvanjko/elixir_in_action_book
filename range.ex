@@ -1,21 +1,22 @@
 defmodule RangeEx do
     def range(from, to) do
-        do_range(to, from)
+        List.flatten(do_range(to, from, []))
     end
     
-    defp do_range(to, to) do
+    defp do_range(to, to, l) do
         to
     end
 
-    defp do_range(from, to) when from > to do
-        a =  do_range(from - 1, to)
-        IO.puts(a)
-        a + 1
+    defp do_range(from, to, l) when from < to do
+        l = [do_range(from + 1, to, l)] ++ l
+        l = l ++ [from]
+        
     end
 
-    defp do_range(from, to) when from < to do
-        a = do_range(from + 1, to) 
-        IO.puts(a)
-        a - 1
+    defp do_range(from, to, l) when from > to do
+
+        l = [do_range(from - 1, to, l)] ++ l
+        l = l ++ [from]
+
     end
 end
