@@ -21,7 +21,7 @@ defmodule Practice do
     end
 
     defp do_range(to, to, l) do
-        l = l ++ [to]
+        l ++ [to]
     end
 
     defp do_range(from, to, l) when to > from do
