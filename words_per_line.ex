@@ -1,5 +1,5 @@
-defmodule Wordsline do
-    def wordsline!(path) do
+defmodule StreamExcercize do
+    def words_per_line!(path) do
 
 
 
