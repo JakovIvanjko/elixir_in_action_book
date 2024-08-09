@@ -96,17 +96,7 @@ defmodule TodoList do
 end
 
 
-defmodule TodoList.CsvImporter do
 
-    def import!(path) do
-        File.stream!(path)
-        |> Stream.map(&String.trim_trailing(&1, "\n"))
-        |> Stream.map(&String.split(&1,","))
-        |> Stream.map(&%{date: Date.from_iso8601!(hd(&1)), title: to_string(tl(&1))})
-        |> TodoList.new()
-    end
-
-end
 
 
 
