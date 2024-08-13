@@ -48,7 +48,6 @@ defmodule PentoWeb.WrongLive do
         score = socket.assigns.score - 1
         #guess = String.to_integer(guess)
         
-
         case String.to_integer(guess) == socket.assigns.goal do
             true -> {
                     :noreply,
