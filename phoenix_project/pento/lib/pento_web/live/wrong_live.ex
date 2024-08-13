@@ -24,7 +24,7 @@ defmodule PentoWeb.WrongLive do
                 <.link href="http://127.0.0.1:4000/guess" class="bg-blue-500 hover:bg-blue-700
                     text-white font-bold py-2 px-4 border border-blue-700 rounded m-1"
                     phx-click="Restart"  >
-                        <%= "Restart" %>
+                    Restart
                 </.link>
             </h2>
         <%else%>
